@@ -1,22 +1,37 @@
-# Desafio: Controle da Animação
+Desafio: Modo Caos vs. Modo Zen
 
-Você já tem uma imagem girando e um fundo mudando de cor. Agora vai adicionar controles reais para isso.
+  O projeto atual é puro caos visual — cores piscando a 100fps, imagem girando sem parar. Seu desafio
+  é criar dois modos opostos que o usuário pode alternar com um único botão.
 
----
+  ---
+  Os dois modos
 
-## O que você vai construir
+  Modo Caos (estado atual):
+  - Fundo pisca aleatoriamente em alta velocidade
+  - Imagem gira rápido
 
-Três botões abaixo da imagem:
+  Modo Zen:
+  - Fundo faz uma transição suave entre cores, sem piscadas bruscas
+  - Imagem gira devagar, quase meditativa
+  - A troca entre as cores deve ser gradual, não instantânea
 
-- **Pausar / Retomar** — para e retoma a rotação da imagem
-- **Mais rápido** — aumenta a velocidade de rotação
-- **Mais devagar** — diminui a velocidade de rotação
+  ---
+  Requisitos
 
----
+  - Um botão visível na tela alterna entre os dois modos
+  - O texto do botão reflete o modo atual (Entrar em Zen / Entrar em Caos)
+  - No Modo Zen, a cor não pode mais pular — ela deve transicionar suavemente
+  - A velocidade de rotação deve ser visivelmente diferente entre os modos
+  - Não pode recarregar a página para trocar de modo
 
-## Requisitos
+  ---
+  Restrição importante
 
-- Os botões devem aparecer na tela, abaixo da imagem
-- O botão de pausar deve mudar de texto conforme o estado atual (`Pausar` / `Retomar`)
-- A velocidade não pode ficar negativa
-- Tudo deve funcionar sem recarregar a página
+  Você não pode simplesmente esconder ou pausar tudo. Ambos os modos devem estar animados e visíveis —
+   a diferença é a qualidade do movimento, não a ausência dele.
+
+  ---
+  Dica conceitual (sem código)
+
+  O maior obstáculo não é o botão — é fazer as cores transitarem em vez de pularem. Pense em como você
+   chegaria a uma cor intermediária entre a cor atual e a próxima.

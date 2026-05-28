@@ -6,23 +6,35 @@ const fastBtn = document.querySelector('#fast');
 const slowBtn = document.querySelector('#slow');
 const divideBtn = document.querySelector('#divide');
 const speedText = document.querySelector('h1');
+const zenBtn = document.querySelector('#Modo-zen');
+const chaosBtn = document.querySelector('#Modo-caos');
 
 let angle = 0;
 let speed = 0;
 let paused = false;
 speedText.innerText = `velocidade:${speed}`;
 const radius = 50;
+let backgroundSpeed= 100;
+let colorInterval;
+
 
 function range() {
   return Math.floor(Math.random() * 256);
 }
 
-setInterval(() => {
+function startBackground() {
+
+  clearInterval(colorInterval);
+
+  colorInterval = setInterval(() => {
 
   div.style.backgroundColor =
     `rgb(${range()}, ${range()}, ${range()})`;
 
-}, 100);
+}, backgroundSpeed);
+
+}
+startBackground();
 
 function orbit() {
 
@@ -85,3 +97,20 @@ divideBtn.addEventListener('click', () => {
 
 
    });
+
+zenBtn.addEventListener('click', () => {
+  backgroundSpeed= 1000;
+  speed= 5;
+  speedText.innerText = `velocidade:${speed}`;
+  startBackground();
+
+
+});
+
+chaosBtn.addEventListener('click', () => {
+  backgroundSpeed= 50;
+  speed= 20;
+  speedText.innerText = `velocidade:${speed}`;
+  startBackground();
+
+});

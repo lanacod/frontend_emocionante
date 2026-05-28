@@ -33,3 +33,25 @@ button{
   color: black;
   background-color: yellow;
 }
+
+#Modo-zen{
+  background-color: green;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+
+}
+
+#Modo-caos{
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  left: 20px;
+  
+}
+  
